@@ -11,29 +11,55 @@
   </head>
   <body>
     <div class="container">
-      <div class="dropdown temp">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTemp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Conversion Options (Temp)
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownTemp">
-          <a class="dropdown-item" href="#">Celsius to Fahrenheit</a>
-          <a class="dropdown-item" href="#">Fahrenheit to Celsius</a>
+      <div class="temp">
+        <div class="dropdown temp">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTemp" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Conversion Options (Temp)
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownTemp">
+            <a class="dropdown-item" href="#">Celsius to Fahrenheit</a>
+            <a class="dropdown-item" href="#">Fahrenheit to Celsius</a>
+          </div>
+        </div>
+        <form id="temp-form">
+          <div class="form-group">
+            <label for="from-temp">Temperature to Convert</label>
+            <input id="from-temp" class="form-control" type="text">
+            <button id="temp-submit" type="submit">Convert!</button>
+          </div>
+        </form>
+        <div class="temp-output">
+          <p>Converted value: <span id="temp-convert"></span></p>
         </div>
       </div>
-      <div class="dropdown volume">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownVol1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Volume Unit (From)
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownVol1">
-          <a class="dropdown-item" href="#">Cup</a>
-          <a class="dropdown-item" href="#">Teaspoon</a>
+      <div class="volume">
+        <div class="dropdown d-inline-block">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownVol1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Volume Unit (From)
+          </button>
+          <div class="dropdown-menu one" aria-labelledby="dropdownVol1">
+            <a class="dropdown-item" href="#">Cup</a>
+            <a class="dropdown-item" href="#">Teaspoon</a>
+          </div>
         </div>
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownVol2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Volume Unit (To)
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownVol2">
-          <a class="dropdown-item" href="#">Tablespoon</a>
-          <a class="dropdown-item" href="#">Quart</a>
+        <div class="dropdown d-inline-block">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownVol2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Volume Unit (To)
+          </button>
+          <div class="dropdown-menu two" aria-labelledby="dropdownVol2">
+            <a class="dropdown-item" href="#">Tablespoon</a>
+            <a class="dropdown-item" href="#">Quart</a>
+          </div>
+        </div>
+        <form id="volume-form">
+          <div class="form-group">
+            <label for="from-volume">Volume to Convert</label>
+            <input id="from-volume" class="form-control" type="text">
+            <button id="volume-submit" type="submit">Convert!</button>
+          </div>
+        </form>
+        <div class="volume-output">
+          <p>Converted value: <span id="volume-convert"></span></p>
         </div>
       </div>
     </div>
