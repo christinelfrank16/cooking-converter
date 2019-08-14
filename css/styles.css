@@ -1,3 +1,7 @@
 .volume {
   display: inline;
 }
+
+.form-group button {
+  margin-top: 10px;
+}
